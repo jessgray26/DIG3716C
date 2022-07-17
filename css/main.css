@@ -1,0 +1,162 @@
+/* STYLING FOR TAGS */
+body{
+  background-image:url('../img/bg-pattern.jpg');
+  background-color:#ffaece;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  color:rgb(80, 80, 80);
+}  
+header{
+  width:60%;
+  margin:auto;
+  padding:19px;
+  border: 1px solid #fff;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 149, 199));
+  background-color:#ffda8b;
+  text-align:center;
+  color:rgb(255, 255, 255);
+  font-size:30px;
+  text-transform: capitalize;
+}
+footer{
+  width:60%;
+  margin:auto;
+  background-color:#fff;
+  padding:20px;
+  background-color:#000;
+  text-align:center;
+  color:#fff;
+  font-size:12px
+}
+
+textarea{
+  width:50%;
+}
+mark{
+  font-size:12px;
+}
+
+p{
+  text-align: center;
+}
+
+hr{
+  border: 1px dotted #E5E5E5;
+  margin-top: 1.5em;
+}
+
+fieldset{
+  margin-bottom: 15px;
+  border: 1px solid rgb(165, 165, 165);
+}
+
+input[type="text"], [type="tel"], [type="email"], [type="url"]{
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+legend{
+  font-size: 16px;
+  background-color: #c2a2ec;
+  padding:5px;
+  border: 1px groove #000000;
+  color:#fff;
+}
+
+/* STYLING FOR CONTAINER */
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  width:60%;
+  margin:auto;
+  background-color:#fff;
+  padding:20px;
+}
+
+.side{
+  flex: 30%;
+}
+
+.main{
+  flex: 70%;
+}
+
+.error, .success {
+  padding:5px;
+}
+
+#personalForm label{
+  font-weight: 600;
+  display: block;
+}
+/* STYLING FOR DIV(S) THAT SHOW USER RESULTS */
+
+#answerBox{
+  width:60%;
+  padding:20px;
+  color:rgb(97, 97, 97);
+  margin: auto;
+  display: none;
+  background-color: rgb(241, 241, 241);
+  border-top:1px solid rgb(46, 46, 46);
+}
+
+#badge{
+  padding:10px;
+  margin-top:15px;
+  border-right: 1px dotted #afafaf;
+  text-align: center;
+  display: none;
+  width:50%;
+}
+
+#badge img{
+  width:65%;
+  border: 1px solid #000;
+  background-color:#fff;
+  box-shadow: 10px 10px #acacac;
+  padding:20px;
+  margin-bottom: 15px;
+}
+
+#results{
+  width:50%;
+  padding:50px;
+}
+#personal{
+  background-color: #e4e4e4;
+}
+#survey{
+  padding:10px;
+}
+
+#submit{
+  background: rgb(255, 131, 183);
+  padding: 10px;
+  color:rgb(255, 241, 252);
+  border-radius: 5px;
+  width:25%;
+  text-transform:uppercase;
+}
+#retakeBTN{
+  background: rgb(73, 179, 3);
+  padding: 10px;
+  color:rgb(221, 255, 167);
+  border-radius: 5px;
+  width:100%;
+  display:none;
+  text-transform:uppercase;
+}
+
+#cinderella, #aurora, #pocahontas, #ariel, #belle, #mulan, #jasmine, #snowwhite{
+  display: none;
+}
+
