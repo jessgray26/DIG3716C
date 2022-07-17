@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Survey - Jessica Gray</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="icon" href="img/favicon.ico" type="image/ico" sizes="16x16">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <script src="js/process_form.js"></script>
+    </head>
+    <body>
+        <header>Which classic disney princess are you?</header>
+            <form name="surveyForm" id="surveyForm" onsubmit="surveyAnswers(); return false;">
+                <div class="row">
+                <div class="side">
+                <fieldset id="personal">
+                    <legend>Personal Info</legend>
+                        <div id="personalForm">
+                            <!-- FIRST NAME FIELD -->
+                            <label for="firstName_id">First Name:</label>
+                            <input id="firstName_id" type="text" name="firstName" value="" onfocus="showHintFN()" oninput="validateData()" onfocusout="hideHints()" required>
+
+                            <span id="errorfn" class="error" style="display:none"><img src="img/invalid.png" alt="red thumbs down"></span>
+                            <span id="successfn" class="success" style="display:none"><img src="img/valid.png" alt="green thumbs up"></span>
+                            <span id="hintfn" style="display:none"><mark>Hint: Please enter <u>more than one</u> character. Text only.</mark></span>		
+                            
+                            <!--LAST NAME FIELD-->  
+                            <label for="lastName_id">Last Name:</label>
+                            <input id="lastName_id" type="text" name="lastName" value="" onfocus="showHintLN()" oninput="validateData()" onfocusout="hideHints()" required>
+
+                            <span id="errorln" class="error" style="display:none"><img src="img/invalid.png" alt="red thumbs down"></span>
+                            <span id="successln" class="success" style="display:none"><img src="img/valid.png" alt="green thumbs up"></span>
+                            <span id="hintln" class="hintln" style="display:none"><mark>Hint: Please enter <u>more than one</u> character. Text only.</mark></span>	
+                            
+                            <!-- EMAIL ADDRESS FIELD --> 
+                            <label for="email_id">Email Address:</label>
+                            <input id="email_id" type="email" name="email" value="" onfocus="showHintEA()" oninput="validateData()" onfocusout="hideHints()" required>
+
+                            <span id="errorea" class="error" style="display:none"><img src="img/invalid.png" alt="red thumbs down"></span>
+                            <span id="successea" class="success" style="display:none"><img src="img/valid.png" alt="green thumbs up"></span>
+                            <span id="hintea" class="hintea" style="display:none"><mark>Hint: Please be sure to include an at sign (@) & period (.)</mark></span>
+                            
+                            <!--PHONE NUMBER FIELD--> 
+                            <label for="phoneNumber_id">Phone Number:</label>
+                            <input id="phoneNumber_id" type="tel" name="phoneNumber" value="" onfocus="showHintPN()" oninput="validateData()" onfocusout="hideHints()" required>
+
+                            <span id="errorpn" class="error" style="display:none"><img src="img/invalid.png" alt="red thumbs down"></span>
+                            <span id="successpn" class="success" style="display:none"><img src="img/valid.png" alt="green thumbs up"></span>
+                            <span id="hintpn" class="hintpn" style="display:none"><mark>Hint: Please use XXX-XXX-XXXX format. <u>Numbers only.</u></mark></span>	
+                            
+                            <!-- SULLEY ADDRESS FIELD--> 
+                            <label for="sulleyAddress_id">Sulley Address:</label>
+                            <input id="sulleyAddress_id" type="url" name="sulleyAddress" value="" onfocus="showHintSA()" oninput="validateData()" onfocusout="hideHints()" required>
+                            
+                            <span id="errorsa" class="error" style="display:none"><img src="img/invalid.png" alt="red thumbs down"></span>
+                            <span id="successsa" class="success" style="display:none"><img src="img/valid.png" alt="green thumbs up"></span>
+                            <span id="hintsa" class="hintsa" style="display:none"><mark>Hint: Please be sure to include https:// & tilde (~).</mark></span>	
+
+                            </div>
+                            <input type="checkbox" id="anonymous" name="anon" value="anon" onclick="anonCheck()">
+                            <label for="anonymous">Anonymous?</label>
+                </fieldset>
+            </div>
+                <div class="main">
+                <fieldset id="survey">
+                    <legend>Questions</legend>
+                        <!--FIRST QUESTION-->
+                        <h4>Which set of positive traits best describes you? 👍</h4>
+                            <input type="radio" id="a_1" name="q1" value="a1" required><label id="a1_label">Diligent, Carefree, Hard-working</label><br />
+                            <input type="radio" id="a_2" name="q1" value="a2"><label id="a2_label">Responsible, Loving, Friendly</label><br />
+                            <input type="radio" id="a_3" name="q1" value="a3"><label id="a3_label">Outgoing, Free-sprited, Adventurous</label><br />
+                            <input type="radio" id="a_4" name="q1" value="a4"><label id="a4_label">Headstrong, Witty, Selfless</label><br />
+                            <input type="radio" id="a_5" name="q1" value="a5"><label id="a5_label">Eccentric, Intuitive , Outspoken</label><br />
+                            <input type="radio" id="a_6" name="q1" value="a6"><label id="a6_label">Courageous, Independent, Ambitious</label><br />
+                            <input type="radio" id="a_7" name="q1" value="a7"><label id="a7_label">Generous, Bold, Optimistic</label><br />
+                            <input type="radio" id="a_8" name="q1" value="a8"><label id="a8_label">Affectionate, Gentle, Trusting</label><br />
+                            <hr>
+                        <!-- SECOND QUESTION -->
+                        <h4>Which set of negative traits best describes you? 👎</h4>
+                            <input type="radio" id="a_9" name="q2" value="a1" required><label id="a9_label">Dependent, Forgetful, Pushover</label><br />
+                            <input type="radio" id="a_10" name="q2" value="a2"><label id="a10_label">Shy, Nosy, Withdrawn</label><br />
+                            <input type="radio" id="a_11" name="q2" value="a3"><label id="a11_label">Stubborn, Rebellious, Argumentative</label><br />
+                            <input type="radio" id="a_12" name="q2" value="a4"><label id="a12_label">Impulsive, Melodramatic, Sassy</label><br />
+                            <input type="radio" id="a_13" name="q2" value="a5"><label id="a13_label">Know-it-all, Recalcitrant, Conceited</label><br />
+                            <input type="radio" id="a_14" name="q2" value="a6"><label id="a14_label">Sneaky, Clumsy, Absent-minded</label><br />
+                            <input type="radio" id="a_15" name="q2" value="a7"><label id="a15_label">Spoiled, Sarcastic, Short-tempered</label><br />
+                            <input type="radio" id="a_16" name="q2" value="a8"><label id="a16_label">Naive, Gullible, Inattentive</label><br />
+                            <hr>
+                        <!-- THIRD QUESTION -->
+                        <h4>Pick a color... 🌈</h4>
+                            <input type="radio" id="a_17" name="q3" value="a1" required><label id="a17_label">White</label><br />
+                            <input type="radio" id="a_18" name="q3" value="a2"><label id="a18_label">Pink</label><br />
+                            <input type="radio" id="a_19" name="q3" value="a3"><label id="a19_label">Teal</label><br />
+                            <input type="radio" id="a_20" name="q3" value="a4"><label id="a20_label">Red</label><br />
+                            <input type="radio" id="a_21" name="q3" value="a5"><label id="a21_label">Yellow</label><br />
+                            <input type="radio" id="a_22" name="q3" value="a6"><label id="a22_label">Green</label><br />
+                            <input type="radio" id="a_23" name="q3" value="a7"><label id="a23_label">Turquoise</label><br />
+                            <input type="radio" id="a_24" name="q3" value="a8"><label id="a24_label">Blue</label><br />
+                            <hr>
+                        <!-- FOURTH QUESTION -->
+                        <h4>It's the weekend - what are you up to? 🤔</h4>
+                            <input type="radio" id="a_25" name="q4" value="a1" required><label id="a25_label">Catching up on household chores</label><br />
+                            <input type="radio" id="a_26" name="q4" value="a2"><label id="a26_label">Sleeping in late and relaxing</label><br />
+                            <input type="radio" id="a_27" name="q4" value="a3"><label id="a27_label">Exploring the great outdoors</label><br />
+                            <input type="radio" id="a_28" name="q4" value="a4"><label id="a28_label">Meeting up with friends or going on a date</label><br />
+                            <input type="radio" id="a_29" name="q4" value="a5"><label id="a29_label">Creating something (eg. writing, photography, etc)</label><br />
+                            <input type="radio" id="a_30" name="q4" value="a6"><label id="a30_label">Playing sports and/or video games</label><br />
+                            <input type="radio" id="a_31" name="q4" value="a7"><label id="a31_label">Taking a quick trip out of town</label><br />
+                            <input type="radio" id="a_32" name="q4" value="a8"><label id="a32_label">Attending a 2-day family gathering</label><br />
+                            <hr>
+                        <!-- FIFTH QUESTION -->
+                        <h4>What would your ideal date look like? ✨</h4>
+                            <input type="radio" id="a_33" name="q5" value="a1" required><label id="a33_label">Dinner at a fancy restaurant</label><br />
+                            <input type="radio" id="a_34" name="q5" value="a2"><label id="a34_label">Cuddling on the couch watching a good movie</label><br />
+                            <input type="radio" id="a_35" name="q5" value="a3"><label id="a35_label">Something adventurous like hiking, surfing, etc</label><br />
+                            <input type="radio" id="a_36" name="q5" value="a4"><label id="a36_label">Walking down the beach during sunset</label><br />
+                            <input type="radio" id="a_37" name="q5" value="a5"><label id="a37_label">Go to a bookstore, then grab lunch at a cafe</label><br />
+                            <input type="radio" id="a_38" name="q5" value="a6"><label id="a38_label">Anything that is spontaneous and fun</label><br />
+                            <input type="radio" id="a_39" name="q5" value="a7"><label id="a39_label">Being a tourist in your own city</label><br />
+                            <input type="radio" id="a_40" name="q5" value="a8"><label id="a40_label">Picnic at a beautiful park full of animals and nature</label><br />
+                            <hr>
+                        <!-- SIXTH QUESTION -->
+                        <h4>Choose a statement...💖</h4>
+                            <input type="radio" id="a_41" name="q6" value="a1" required><label id="a41_label">True love means taking risks!</label><br />
+                            <input type="radio" id="a_42" name="q6" value="a2"><label id="a42_label">True love will find you!</label><br />
+                            <input type="radio" id="a_43" name="q6" value="a3"><label id="a43_label">True love has no boundaries!</label><br />
+                            <input type="radio" id="a_44" name="q6" value="a4"><label id="a44_label">True love means sacrifice!</label><br />
+                            <input type="radio" id="a_45" name="q6" value="a5"><label id="a45_label">True love is blind!</label><br />
+                            <input type="radio" id="a_46" name="q6" value="a6"><label id="a46_label">True love has to be fought for!</label><br />
+                            <input type="radio" id="a_47" name="q6" value="a7"><label id="a47_label">True love can form over time!</label><br />
+                            <input type="radio" id="a_48" name="q6" value="a8"><label id="a48_label">True love is what dreams are made of!</label><br />
+                </fieldset>
+                <input id="submit" type="submit" name="submit" value="Submit">
+                </div>
+            </div>
+                </form>
+
+        <div id="answerBox">
+            <div id="badge">
+                <p id="cinderella"><img src="img/cinderella.png" id="cinderella_img" alt="image of cinderella"></p>
+                <p id="aurora"><img src="img/aurora.png" id="aurora_img" alt="image of aurora"></p>
+                <p id="pocahontas"><img src="img/pocahontas.png" id="pocahontas_img" alt="image of pocahontas"></p>
+                <p id="ariel"><img src="img/ariel.png" id="ariel_img" alt="image of ariel"></p>
+                <p id="belle"><img src="img/belle.png" id="belle_img" alt="image of belle"></p>
+                <p id="mulan"><img src="img/mulan.png" id="mulan_img" alt="image of mulan"></p>
+                <p id="jasmine"><img src="img/jasmine.png" id="jasmine_img" alt="image of jasmine"></p>
+                <p id="snowwhite"><img src="img/snowwhite.png" id="snowwhite_img" alt="image of snow white"></p>
+            </div>
+            <div id="results">
+                <div id="userAnswers"></div>
+                <div id="userInfo"></div>
+                <input type="button" id="retakeBTN" value="Retake Survey?" onClick="retakeSurvey()">
+            </div>
+        </div>
+        <footer>Created by Jessica Gray</footer>
+    </body>
+</html>
